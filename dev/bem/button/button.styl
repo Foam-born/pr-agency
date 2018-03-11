@@ -1,0 +1,38 @@
+@require '../../common/styles/global-variables.styl'
+
+.button
+  display: flex
+  align-items: center
+  padding: 10px $default-padding * 2
+  background-color: $thunderbird
+  border: 0
+  outline: 0!important
+  border-radius: $default-padding * 2
+  box-shadow: 0 0 40px $pure-black
+  text-transform: uppercase
+  font-weight: $font-weight--bold
+  font-size: 14px
+  letter-spacing: .5px
+  color: $pure-white
+  cursor: pointer
+  transition: .3s
+  &:hover
+    box-shadow: 0 0 10px 1px $pure-black
+
+  &--font
+    &--big
+      .button__text
+        line-height: 20px
+
+  &--bg
+    &--dark
+      background-color: $main-shaft--dark
+
+  &__text
+    display: inline-block
+    text-align: left
+
+  &__icon
+    size(29px, 39px)
+    margin-right: $default-padding
+

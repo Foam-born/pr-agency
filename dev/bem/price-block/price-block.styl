@@ -1,0 +1,38 @@
+@require '../../common/styles/global-variables.styl'
+
+.price-block
+  display: flex
+  align-items: center
+
+  &__value
+    margin-right: $default-padding
+    font-size: 24px
+    font-weight: $font-weight--bold
+
+  &__currency
+    $size = 40px
+
+    size($size)
+    background-color: $pure-white
+    border-radius: 50%
+    line-height: $size
+    text-align: center
+    font-size: 20px
+    font-weight: $font-weight--bold
+    color: $main-shaft
+
+  &__notice
+    margin-left: $default-padding
+    font-size: 24px
+    font-weight: $font-weight--bold
+    text-transform: uppercase
+    @media (max-width: $small)
+      font-size: 14px
+
+  &__text
+    font-size: 17px
+    text-transform: uppercase
+    font-weight: $font-weight--bold
+    @media (max-width: $small)
+      text-align: center
+      font-size: 14px

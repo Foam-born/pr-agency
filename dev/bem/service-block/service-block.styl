@@ -1,0 +1,60 @@
+@require '../../common/styles/global-variables.styl'
+
+.service-block
+  position: relative
+  overflow: hidden
+  $block-height = 370px
+
+  &:nth-child(2n)
+    .service-block__number
+      left: 0
+    .service-block__row
+      flex-direction: row-reverse
+
+  &__image-container
+    position: relative
+
+  &__small-img-container
+    position: absolute
+    display: flex
+    justify-content: center
+    align-items: center
+    top: 0
+    left: 0
+    size(100%)
+
+  &__big-img
+    size($block-height)
+    @media(max-width: $extra-large)
+      size(300px)
+
+  &__content-container
+    min-height: $block-height
+
+  &__content
+    font-size: 14px
+    font-weight: $font-weight--regular
+
+    ul
+      list-style-type: none
+
+  &__title
+    font-size: 24px
+    font-weight: $font-weight--black
+
+  &__subtitle
+    margin: $default-padding * 2 0
+    line-height: 20px
+    text-transform: uppercase
+    font-weight: $font-weight--bold
+    font-size: 14px
+
+  &__number
+    position: absolute
+    top: -230px
+    right: 0
+    font-size: 530px
+    font-weight: $font-weight--black
+    color: $thunderbird
+    @media (max-width: $small)
+      top: -200px

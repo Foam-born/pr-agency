@@ -1,0 +1,85 @@
+@require '../../common/styles/global-variables.styl'
+
+$input-width = 230px
+
+focused()
+  &:focus
+    background-color: $pure-white
+    +placeholder()
+      font-size: 14px
+      color: $main-shaft
+
+.feedback-form
+  padding: 0
+  color: $pure-white
+
+  &--vertical
+    .feedback-form__label
+      display: flex
+      justify-content: space-between
+      align-items: center
+      @media (max-width: $small)
+        flex-direction: column
+
+    .feedback-form__textarea
+      width: $input-width
+
+  &__title
+    margin: 0 0 $default-padding * 2 $default-padding * -1
+    text-transform: uppercase
+    line-height: 24px
+    font-size: 24px
+    font-weight: $font-weight--black
+    letter-spacing: 0.6px
+    @media (max-width: $extra-large)
+      text-align: center
+
+  &__label
+    display: block
+    margin: 0 $default-padding $default-padding * 2 0
+    @media (max-width: $extra-large)
+      text-align: center
+
+    &--full-width
+      width: 100%
+
+  &__label-text
+    margin-right: $default-padding
+    text-transform: uppercase
+    text-align: left
+    font-size: 14px
+    font-weight: $font-weight--bold
+    letter-spacing: 0.35px
+    @media (max-width: $extra-large)
+      display: block
+      margin-bottom: $default-padding
+    @media (max-width: $small)
+      text-align: center
+
+  &__input
+    width: $input-width
+    padding: $default-padding * .6
+    border-radius: $default-padding * 2
+    background-color: $main-shaft-cold
+    outline: none
+    border: none
+    transition: .3s
+    focused()
+    +placeholder()
+      font-size: 14px
+      color: transparent
+
+  &__textarea
+    width: 100%
+    min-height: 90px
+    resize: none
+    padding: $default-padding
+    outline: none
+    border: none
+    transition: .3s
+    border-radius: $default-padding * 2
+    background-color: $main-shaft-cold
+    focused()
+    +placeholder()
+      font-size: 14px
+      color: transparent

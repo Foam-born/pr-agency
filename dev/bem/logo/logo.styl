@@ -1,0 +1,22 @@
+@require '../../common/styles/global-variables.styl'
+
+.logo
+
+  &--black
+    .logo__img
+      background-image: url($path-to-images + 'logo--black.png')
+
+    .logo__text
+      color: $main-shaft
+      margin: $default-padding * -1 0 0 7px
+
+  &__img
+    size(183px, 67px)
+    background-image: url($path-to-images + 'logo--white.png')
+    background-repeat: no-repeat
+
+  &__text
+    margin: $default-padding * -2 0 0 3px
+    font-size: 14px
+    font-weight: $font-weight--medium
+    color: $pure-white

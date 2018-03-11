@@ -1,0 +1,39 @@
+@require '../../common/styles/global-variables.styl'
+
+.lightbox
+  position: fixed
+  display: none
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+  padding: 100px 0
+  background-color: alpha($main-shaft, 0.8)
+  z-index: 3
+  overflow: auto
+  @media(max-height: 768px)
+    align-items: flex-start
+
+  &--opened
+    display: flex
+
+  &__content
+    position: relative
+    display: inline-block
+    min-width: 300px
+    padding: $default-padding * 3
+    background-color: $main-shaft
+    border-radius: 3px
+
+  &__closer
+    position: absolute
+    top: $default-padding * -3
+    right: 0
+    size(29px)
+    background-size: 100%
+    background-image: url($path-to-images + 'svg/closer.svg')
+    cursor: pointer
+    transition: .3s
+    &:hover
+      transform: rotate(90deg)
+    

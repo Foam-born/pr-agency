@@ -1,0 +1,22 @@
+@require '../../common/styles/global-variables.styl'
+
+.section
+  width: 100vw
+  padding-top: $default-padding * 2
+  padding-bottom: $default-padding * 2
+  overflow: hidden
+
+  &--padding
+    &--big
+      padding-top: $default-padding * 4
+      padding-bottom: $default-padding * 4
+
+  &--bg
+    &--dark-grid
+      background-image: url($path-to-images + 'bg.jpg')
+    &--main-shaft
+      background-color: $main-shaft
+    &--main-shaft-light
+      background-color: $main-shaft-light
+    &--main-shaft-dark
+      background-color: $main-shaft--dark

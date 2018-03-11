@@ -1,0 +1,21 @@
+@require '../../common/styles/global-variables.styl'
+
+.capture-button
+  position: fixed
+  bottom: $default-padding * 2
+  right: $default-padding * 2
+  size (60px)
+  background-color: $thunderbird
+  background-image: url($path-to-images + 'svg/plane.svg')
+  background-size: 38px 28px
+  background-position: 50%
+  background-repeat: no-repeat
+  border-radius: 50%
+  cursor: pointer
+  z-index: 2
+  transition: .3s
+  &:hover
+    box-shadow: 0 0 10px $thunderbird
+  @media (max-width: $small)
+    bottom: $default-padding
+    right: $default-padding

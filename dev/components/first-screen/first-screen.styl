@@ -1,0 +1,40 @@
+@require '../../common/styles/global-variables.styl'
+
+.first-screen
+  min-height: 700px
+  padding-top: 200px
+
+  &__content
+    padding: 0
+    color: $pure-white
+
+  &__title
+    color: $thunderbird
+    font-weight: $font-weight--black
+
+  &__subtitle
+    font-weight: $font-weight--light
+
+  &__clauses
+    padding: 0
+    margin: $default-padding * 3 0 $default-padding * 6 0
+    font-size: 14px
+    list-style-type: none
+
+  &__clause
+    margin-bottom: $default-padding
+    line-height: 18px
+    font-weight: $font-weight--medium
+
+  &__image-container
+    position: absolute
+    top: -130px
+    left: $default-padding * -3
+
+  &__image-column
+    @media(max-width: $large)
+      position: absolute
+      opacity: .3
+
+  &__content-column
+    z-index: 1

@@ -1,0 +1,16 @@
+size(w, h = false)
+  width w
+  if h
+    height h
+  else
+    height w
+
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}

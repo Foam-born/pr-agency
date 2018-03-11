@@ -1,0 +1,19 @@
+@require 'global-variables.styl'
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $font-family-general
+  color $main-shaft
+  overflow-x: hidden
+
+  &::-webkit-scrollbar
+    width: 10px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $thunderbird
+    outline: 1px solid $main-shaft
+
+section, header, footer, aside, article, main
+  display: block

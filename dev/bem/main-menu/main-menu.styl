@@ -1,0 +1,46 @@
+@require '../../common/styles/global-variables.styl'
+
+.main-menu
+  display: none
+
+  &--font
+    &--white
+      a.main-menu__link
+        color: $pure-white
+
+
+  &--opened
+    display: block
+
+  &__list
+    display: flex
+    flex-direction: row
+    align-content: space-between
+    flex-wrap: wrap
+    list-style-type: none
+    @media (max-width: $extra-large)
+      padding: 0
+    @media (max-width: $small)
+      flex-direction: column
+
+  &__item
+    @media (min-width: $small)
+      &:not(:last-child)
+        &:after
+          content: '/'
+          margin: 0 $default-padding
+          font-weight: $font-weight--bold
+          color: $thunderbird
+
+  a&__link
+    text-decoration: none
+    text-transform: uppercase
+    line-height: 30px
+    font-size: 12px
+    font-weight: $font-weight--black
+    color: $main-shaft
+    transition: .3s
+    &:hover
+      color: $thunderbird
+
+

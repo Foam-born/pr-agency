@@ -1,0 +1,30 @@
+@require '../../common/styles/global-variables.styl'
+
+.site-header
+  position: fixed
+  padding: $default-padding * 2 0 $default-padding 0
+  background-color: transparent
+  z-index: 2
+  transition: .3s
+
+  &--bg
+    &--white
+      background-color: $pure-white
+
+  &--scrolled
+    background-color: $main-shaft
+
+  &__container
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  &__button-column
+    &--hidden
+      display: none
+      &--small-screen
+        @media (max-width: $small)
+          display: none
+
+  &__sandwich.sandwich--opened
+    margin-top: 17px

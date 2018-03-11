@@ -1,0 +1,34 @@
+@require '../../common/styles/global-variables.styl'
+
+.images-carousel
+
+  &__list
+    position: relative
+
+    .slick-arrow
+      position: absolute
+      size(25px)
+      overflow: hidden
+      color: transparent
+      background: none
+      background-image: url($path-to-images + 'svg/arrow.svg')
+      background-repeat: no-repeat
+      background-size: 100%
+      border: none
+      outline: none
+      cursor: pointer
+      @media (max-width: $medium)
+        display: none!important
+
+    .slick-prev
+      left: -5px
+      top: 10px
+
+    .slick-next
+      right: -40px
+      top: 15px
+      transform scale(-1)
+
+  &__img
+    margin: auto
+

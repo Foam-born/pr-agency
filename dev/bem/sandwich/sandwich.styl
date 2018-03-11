@@ -1,0 +1,27 @@
+@require '../../common/styles/global-variables.styl'
+
+.sandwich
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  size(40px, 39px)
+  cursor: pointer
+  transition: .3s
+  &:hover
+    .sandwich__item
+      background-color: $pomegranate
+
+  &__item
+    width: 100%
+    height: 5px
+    background-color: $thunderbird
+    transition: .3s
+
+  &--opened &__item:first-child
+    display: none
+
+  &--opened &__item:nth-child(2)
+    transform: translateY(13px) rotate(45deg)
+
+  &--opened &__item:last-child
+    transform: translateY(-20px) rotate(-45deg)
